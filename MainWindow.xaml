@@ -1,0 +1,81 @@
+﻿<Window x:Class="Homework_WpfApp5._2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Homework_WpfApp5._2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Margin="5" Padding="5">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Открыть" Click="MenuItem_Click"/>
+                <MenuItem Header="Сохранить" Click="MenuItem_Click_1"/>
+                <Separator/>
+                <MenuItem Header="Выход" Click="MenuItem_Click_2"/>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray Grid.Row="1">
+            <ToolBar Margin="5" Padding="5">
+                <Button Click="Button_Click">
+                    <Image Height="20" Source="Data/marker.png"/>
+                </Button>
+                <Button Click="Button_Click_1">
+                    <Image Height="20" Source="Data/eraser.png"/>
+                </Button>
+            </ToolBar>
+            <ToolBar Margin="5" Padding="5">
+                <ComboBox SelectedIndex="2" SelectionChanged="ComboBox_SelectionChanged">
+                    <TextBlock Text="2"/>
+                    <TextBlock Text="4"/>
+                    <TextBlock Text="6"/>
+                    <TextBlock Text="8"/>
+                    <TextBlock Text="10"/>
+                    <TextBlock Text="12"/>
+                </ComboBox>
+            </ToolBar>
+            <ToolBar Margin="5" Padding="5">
+                <Button Click="Button_Click_2" >
+                    <Image Height="20" Source="Data/white.png"/>
+                </Button>
+                <Button Click="Button_Click_3" >
+                    <Image Height="20" Source="Data/black.png"/>
+                </Button>
+                <Button Click="Button_Click_4" >
+                    <Image Height="20" Source="Data/red.png"/>
+                </Button>
+                <Button Click="Button_Click_5">
+                    <Image Height="20" Source="Data/orange.png"/>
+                </Button>
+                <Button Click="Button_Click_6">
+                    <Image Height="20" Source="Data/yellow.png"/>
+                </Button>
+                <Button Click="Button_Click_7">
+                    <Image Height="20" Source="Data/green.png"/>
+                </Button>
+                <Button Click="Button_Click_8">
+                    <Image Height="20" Source="Data/blue.png"/>
+                </Button>
+                <Button Click="Button_Click_9">
+                    <Image Height="20" Source="Data/darkblue.png"/>
+                </Button>
+                <Button Click="Button_Click_10">
+                    <Image Height="20" Source="Data/purple.png"/>
+                </Button>
+            </ToolBar>
+            <ToolBar Margin="5" Padding="5">
+                <Button Content="Очистить" Margin="3" Padding="3" BorderBrush="#FFA6A1A1" Click="Button_Click_11" />
+            </ToolBar>
+        </ToolBarTray>
+        <InkCanvas x:Name="drawing" Grid.Row="2" EditingMode="Ink">
+            <InkCanvas.DefaultDrawingAttributes>
+                <DrawingAttributes Color="Black" Width="6" Height="6"/>
+            </InkCanvas.DefaultDrawingAttributes> 
+         </InkCanvas>
+    </Grid>
+</Window>
